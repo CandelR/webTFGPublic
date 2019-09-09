@@ -1,0 +1,15 @@
+.btn-ppal {
+    background: #5dcdd0;
+    border: 3px solid #5dcdd1;
+    border-radius: 3px;
+    color: #ffffff;
+    display: block;
+    width: 100%;
+    -webkit-box-shadow: 0 15px 20px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 15px 20px rgba(0, 0, 0, 0.1);
+    -o-box-shadow: 0 15px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.1); }
+
+#config_engine {
+    width: 300px;
+}
