@@ -43,10 +43,10 @@ class TwitterEngineController extends Controller
             case "setEnv":
                 $config_ok = $this->setTwitterEngineEnv($task);
                 if ($config_ok)
-                    $ret = view('twitterEngine')->with(['contents' => "", 'userQueries' => $userQueries,
+                    $ret = view('twitterengine')->with(['contents' => "", 'userQueries' => $userQueries,
                         'task' => $task, 'config_ok' => $config_ok]);
                 else
-                    $ret = view('twitterEngine')->with(['contents' => "", 'userQueries' => $userQueries]); //CON ERROR
+                    $ret = view('twitterengine')->with(['contents' => "", 'userQueries' => $userQueries]); //CON ERROR
                 break;
 
             case "getAndSendTweets":
@@ -85,7 +85,7 @@ class TwitterEngineController extends Controller
         if ($cm_cd_consulta_motor)
             $this->saveTweets($tweets_array, $cm_cd_consulta_motor);
         else
-            return view('twitterEngine')->with(['error' => 'error']);
+            return view('twitterengine')->with(['error' => 'error']);
 
         //CREAR GRAFICA DE RESULTADOS
         $res = $this->createHighChart($tags, $cm_cd_consulta_motor); // and insert tweets classification results
@@ -93,7 +93,7 @@ class TwitterEngineController extends Controller
         $chart = $res[0];
         $resultados_analisis = $res[1];
 
-        return view('twitterEngine')->with([
+        return view('twitterengine')->with([
             'contents' => $tweets_array,
             'resultados_analisis' => $resultados_analisis,
             'chart' => $chart,
